@@ -1,8 +1,7 @@
 'use client'
 
-import { PROFILE, Profile } from "@/types/profiles";
-import { useLocalStorage } from "@uidotdev/usehooks";
-import { redirect } from "next/navigation";
+import { useLocalStorage } from "@/hooks/use-local-storage";
+import { Profile } from "@/types/profiles";
 import { createContext, useCallback, useContext, useMemo, } from "react";
 
 type UserProfileContextType = {

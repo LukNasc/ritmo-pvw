@@ -1,9 +1,8 @@
 'use client';
 
+import { useLocalStorage } from "@/hooks/use-local-storage";
 import { Goal } from "@/types/goals";
-import { useLocalStorage } from "@uidotdev/usehooks";
 import { createContext, useCallback, useContext, useMemo } from "react";
-
 
 type GoalContextType = {
     goals: Goal[],
