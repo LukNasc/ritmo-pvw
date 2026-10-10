@@ -1,11 +1,11 @@
 'use client'
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { FlagIcon, PlusIcon, SettingsIcon } from "lucide-react";
+import { PlusIcon, SettingsIcon } from "lucide-react";
 import { formatCurrency } from "@/utils/currency";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia } from "@/components/ui/empty";
+import { Empty, EmptyContent, EmptyDescription } from "@/components/ui/empty";
 import { CreateSalesFormDrawer } from "@/forms/create-sales-form-drawer";
 import { useUserProfile } from "@/context/UserProfileContext";
 import { MonthNav } from "@/features/months/components/month-nav";
@@ -75,7 +75,7 @@ export default function DashboardScreen() {
             </Card>
             {
                 overview.isLoading ? (
-                    <Skeleton className="w-full h-[200px]" />
+                    <Skeleton className="w-full h-50" />
                 ) : (
                     <GoalsProgressSection monthKey={monthKey} goals={overview.goals} />
                 )

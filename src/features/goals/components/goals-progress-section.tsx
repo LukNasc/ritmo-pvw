@@ -5,9 +5,10 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useState } from "react";
 import { Goal } from "@/core/db/schema";
 import { formatBRL } from "@/core/domain/money";
+import { GoalWithProgress } from "../hooks/use-goals-overview";
 
 type GoalsProgressSectionProps = {
-    goals: Goal[],
+    goals: GoalWithProgress[],
     monthKey: string;
 }
 
